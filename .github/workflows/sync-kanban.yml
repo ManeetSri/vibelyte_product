@@ -1,0 +1,12 @@
+name: Sync Kanban
+
+on:
+  issues:
+    types: [opened, closed]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/create-issues.js

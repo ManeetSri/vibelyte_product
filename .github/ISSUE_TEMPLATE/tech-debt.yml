@@ -1,0 +1,8 @@
+name: Tech Debt
+description: Refactoring or cleanup
+labels: ["tech-debt"]
+body:
+  - type: textarea
+    id: details
+    attributes:
+      label: Description

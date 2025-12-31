@@ -1,0 +1,12 @@
+name: Bug
+description: Bug report
+labels: ["bug"]
+body:
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior

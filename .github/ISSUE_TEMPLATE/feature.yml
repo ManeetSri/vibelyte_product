@@ -1,0 +1,24 @@
+name: Feature
+description: Feature implementation
+labels: ["feature"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Feature name
+      placeholder: e.g. Chat message delivery
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+  - type: dropdown
+    id: owner
+    attributes:
+      label: Owner
+      options:
+        - backend
+        - ios
