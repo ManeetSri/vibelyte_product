@@ -1,16 +1,18 @@
-import { parseSRS } from "./parse-srs.js";
+import "dotenv/config";
 import { createIssues } from "./create-issues.js";
+import { generateAcceptanceCriteria } from "./ai-acceptance.js";
 
+async function run() {
+  console.log("🚀 PM Agent Started");
 
-(async () => {
-  console.log("Running PM Agent...");
-  const modules = parseSRS();
+  const issues = await createIssues();
 
-  if (!modules.length) {
-    console.log("No modules found.");
-    return;
+  for (const issue of issues) {
+    const acceptance = await generateAcceptanceCriteria(issue);
+    console.log(`Acceptance for ${issue.title}:\n${acceptance}`);
   }
 
-  await createIssues();
-  console.log("PM Agent complete.");
-})();
+  console.log("✅ PM Agent Completed");
+}
+
+run();

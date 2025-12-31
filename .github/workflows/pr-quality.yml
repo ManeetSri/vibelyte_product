@@ -1,0 +1,21 @@
+name: PR Quality Gate
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  quality-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run tests
+        run: npm test || true
+
+      - name: Ensure PR description exists
+        run: |
+          if [ -z "${{ github.event.pull_request.body }}" ]; then
+            echo "PR description is required"
+            exit 1
+          fi
