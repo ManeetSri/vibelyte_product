@@ -1,5 +1,5 @@
 import { Octokit } from "@octokit/rest";
-import { parseSRS } from "./parse-srs";
+import { parseSRS } from "./parse-srs.js";
 
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 

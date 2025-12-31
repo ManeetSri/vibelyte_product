@@ -1,5 +1,6 @@
-import { createIssues } from "./create-issues";
-import { parseSRS } from "./parse-srs";
+import { parseSRS } from "./parse-srs.js";
+import { createIssues } from "./create-issues.js";
+
 
 (async () => {
   console.log("Running PM Agent...");

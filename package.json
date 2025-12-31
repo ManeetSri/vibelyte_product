@@ -1,0 +1,12 @@
+{
+  "name": "vibelyt-product",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "pm": "node scripts/pm-agent.js"
+  },
+  "devDependencies": {
+    "@octokit/rest": "^22.0.1",
+    "ts-node": "^10.9.2"
+  }
+}
