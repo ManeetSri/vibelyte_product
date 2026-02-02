@@ -3,7 +3,7 @@ import { openai } from "./openai-client.js";
 import { Octokit } from "@octokit/rest";
 
 const diff = fs.readFileSync("diff.txt", "utf-8");
-const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+const octokit = new Octokit({ auth: process.env.TOKEN });
 
 export async function runAIReview() {
   const prompt = `

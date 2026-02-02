@@ -3,7 +3,7 @@ import { parseSRS } from "./parse-srs.js";
 import { REPOS } from "./repo-map.js";
 import { generateSubtasks } from "./generate-subtasks.js";
 
-const defaultOctokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+const defaultOctokit = new Octokit({ auth: process.env.TOKEN });
 
 async function issueExists(client, owner, repo, title) {
   try {

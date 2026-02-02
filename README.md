@@ -31,8 +31,8 @@ This repository contains the product management and automation tools for the **V
 3.  Configure environment variables:
     Create a `.env` file in the root directory:
     ```env
-    GITHUB_TOKEN=your_github_token
-    OPENAI_API_KEY=your_openai_key
+    TOKEN=your_github_token
+    API_KEY=your_openai_key
     ```
 
 ## Usage

@@ -145,3 +145,4 @@ dist
 
 node_modules
 coverage
+.env
